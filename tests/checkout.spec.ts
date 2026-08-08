@@ -46,10 +46,8 @@ test('inValid checkout page', async ({ page }) => {
 
     await cart.startCheckout()
     await checkout.cardInfo('Abdellah','','11101')
-   
     await checkout.Continue()
     await expect(page.locator('[data-test="error"]')).toBeVisible();
-   
 
 });
 

@@ -12,8 +12,6 @@ test.beforeEach(async ({ page }) => {
 
 test("add items", async({page}) => {
     const inventory = new InventoryPage(page);
-
-
     await inventory.sortItems()
     await inventory.addItem("test.allthethings()-t-shirt-(red)")
     await inventory.addItem("sauce-labs-bolt-t-shirt")
