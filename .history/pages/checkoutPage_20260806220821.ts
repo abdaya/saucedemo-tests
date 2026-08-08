@@ -1,0 +1,34 @@
+import { Locator,type Page } from '@playwright/test';
+
+
+
+export class checkoutPage {
+    readonly firstNameInput: Locator;
+    readonly lastNameInput: Locator;
+    readonly zipCodeInput: Locator;
+    readonly 
+
+    constructor(private readonly page: Page) {
+        this.firstNameInput = page.locator('#first-name')
+        this.lastNameInput = page.locator('#last-name')
+        this.zipCodeInput = page.locator('#postal-code')
+    }
+    async cardInfo(
+       
+    ){
+        await this.firstName
+        await this.lastName
+        await this.zipCode
+  }
+
+  async Continue() {
+      return await this.page.locator('#continue').click();
+  }
+    PayInfo() {
+    return this.page.locator('[data-test="payment-info-value"]')
+    }
+
+    PayText() {
+        return this.PayInfo().innerText()
+    }
+}
